@@ -16,6 +16,9 @@ https://youtu.be/h1nUQOxF0Nw
 ## Установка (Installation)
 Для установки необходимо выполнить следующие шаги:
 
+0.  установи python 3.9.0
+https://www.python.org/downloads/windows/ 
+
 1. Установите необходимые библиотеки с помощью команды pip (Install the required libraries using pip):
 ```bash
 pip install aiohttp beautifulsoup4 pyautogui pytesseract pillow colored
