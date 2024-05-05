@@ -88,12 +88,14 @@ def find_similar_names(screenshot_names, player_data):
 
 def get_color(wins):
     wins_percent = float(wins[:-1])
-    if wins_percent >= 100:
-        return '#2600ff'
-    elif wins_percent >= 49:
-        return '#26ff00'
-    elif wins_percent >= 40:
-        return '#ff0000'
+    if wins_percent >= 70:
+        return '#800080'  # Violet
+    elif wins_percent >= 60:
+        return '#00BFFF'  # Light Blue
+    elif wins_percent >= 50:
+        return '#00FF00'  # Green
+    elif wins_percent <= 49:
+        return '#FFFFFF'  # White
 
 async def main():
     while True:
