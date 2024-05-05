@@ -15,6 +15,7 @@ https://youtu.be/h1nUQOxF0Nw
 
 ## Установка (Installation)
 Для установки необходимо выполнить следующие шаги:
+
 0.  установи python 3.9.x 
 https://www.python.org/downloads/windows/ 
 
