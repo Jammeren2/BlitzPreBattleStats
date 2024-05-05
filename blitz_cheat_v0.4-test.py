@@ -58,19 +58,31 @@ def extract_player_names(data_file_path):
 
     return players
 
+
 def find_similar_names(screenshot_names, player_data):
     enemies = []
     others = []
 
+    # Создаем переменную player_data_no_ и записываем туда player_data['username'] без '_'
+    player_data_no_ = [p['username'].replace('_', '') for p in player_data]
+    print(f"player_data_no_ {player_data_no_}")
     for name in screenshot_names:
-        similar = difflib.get_close_matches(name, [p['username'] for p in player_data], n=1, cutoff=0.2)
+        # Убираем все '_'
+        name_no_ = name.replace('_', '')
+        print(f"name_no_ {name_no_}")
+        similar = difflib.get_close_matches(name_no_, player_data_no_, n=1, cutoff=0.2)
+        print(f"similar {similar}")
         if similar:
-            player = next(p for p in player_data if p['username'] == similar[0])
-            enemies.append(player)
-        # else:
-        #     # print(f"No match found for {name} in player data.")
+            original_name = player_data[player_data_no_.index(similar[0])]['username']
+            print(f"Сравнивается {name} с {original_name}")  # Добавлен вывод
+            # Сопоставляем оригинальное имя и screenshot_names
+            for player in player_data:
+                if player['username'] == original_name:
+                    enemies.append(player)
+                    break
 
     return enemies
+
 
 def get_color(wins):
     wins_percent = float(wins[:-1])
@@ -120,6 +132,9 @@ async def main():
 
         enemies = find_similar_names(screenshot_enemy_names, players_data)
         allies = find_similar_names(screenshot_team_names, players_data)
+        print(f"enemies {enemies}")
+        print(f"allies {allies}")
+
         run_code(7)
         # file_players = ['BuKa_B_Cyxux_TpycuKax6f0q', 'Gon43', 'AriStokRat_s_BaShkiRii', '8eBMTBH', 'Nikitka_ejik', '_kalavrat_', '3Jlou_u_HeDoBep4uBblu', 'MMurakame', 'BuKa_B_Cyxux_TpycuKax', 'maloyy34777', 'TTpaBo_uMel0', 'HU_GA__TOP', 'Arbus_228', 'Alexei228760', 'Steel_Gold', 'bibok_metkij']
         enemies_data = [{'username': enemy['username'], 'id': enemy['id'], 'wins': enemy['wins']} for enemy in enemies]
