@@ -95,7 +95,7 @@ def get_color(wins):
     elif wins_percent >= 50:
         return '#00FF00'  # Green
     elif wins_percent <= 49:
-        return '#FFFFFF'  # White
+        return '#fcf0f0'  # White
 
 async def main():
     while True:
@@ -151,10 +151,7 @@ async def main():
 
 
 
-        # Создаем окно для союзников
-
-        # Создаем окно для противников
-
+        
         if allies_data:
             root = tk.Tk()
             root.overrideredirect(True)
@@ -194,6 +191,8 @@ async def main():
                 label = tk.Label(enemy_root, text=f"{username} {wins}", width=30, borderwidth=1, relief="solid",  background=background_color, font=("Arial", 14))
                 label.pack(anchor="w")
                 enemy_root.update()
+
+
 
         run_code(10)
         print(" ")
