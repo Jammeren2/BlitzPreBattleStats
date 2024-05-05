@@ -30,4 +30,4 @@ pytesseract.pytesseract.tesseract_cmd = r'C:/Users/my/Desktop/py/blitz_cheat/bli
 ```python
 data_file_path = 'C:\\Users\\my\\Documents\\TanksBlitz\\replays\\recording_Nick_Name.wotbreplay\\data.wotreplay'
 ```
-### Обратите внимание, что папка recording_Nick_Name.wotbreplay появляется только во время боя.
+#### Обратите внимание, что папка recording_Nick_Name.wotbreplay появляется только во время боя.
