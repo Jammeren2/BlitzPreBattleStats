@@ -25,4 +25,4 @@ data_file_path = 'C:\\Users\\my\\Documents\\TanksBlitz\\replays\\recording_Nick_
 ```
 #### Обратите внимание, что папка recording_Nick_Name.wotbreplay появляется только во время боя (Note that the recording_Nick_Name.wotbreplay folder appears only during battle).
 
-3. Запустите START.bat, выберите последнюю версию. (Run START.bat, select the latest version)
+3. Запустите START.bat. (Run START.bat)
