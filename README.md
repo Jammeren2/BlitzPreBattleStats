@@ -25,4 +25,16 @@ data_file_path = 'C:\\Users\\my\\Documents\\TanksBlitz\\replays\\recording_Nick_
 ```
 #### Обратите внимание, что папка recording_Nick_Name.wotbreplay появляется только во время боя (Note that the recording_Nick_Name.wotbreplay folder appears only during battle).
 
-3. Запустите START.bat. (Run START.bat)
+3. ИНСТРУКЦИЯ ПО НАСТРОЙКЕ:
+
+Выделите области союзников. должно быть так: https://i.imgur.com/ZNj9PWi.png
+
+Смена выделенной области: Нажмите 'q'
+
+Перемещение области: Используйте клавиши 'w', 'a', 's', 'd'
+
+Изменение высоты и ширины: Используйте клавиши 'z', 'x', 'c', 'v'
+
+Для более удобной настройки вы можете открыть скриншот загрузки боя.
+
+4. Запустите START.bat. (Run START.bat)
