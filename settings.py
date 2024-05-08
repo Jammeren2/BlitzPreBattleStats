@@ -49,12 +49,13 @@ def create_square_outline(x, y, h, w, color):
 # Создание квадратов
 squares = {}
 for section in config.sections():
-    if 'coords' in config[section]:
-        coords = config[section]['coords']
-        color = 'red' if section.startswith('team') else 'blue'  # Выбор цвета в зависимости от имени секции
-        x, y, h, w = map(int, coords.split(","))
-        squares[section] = {'x': x, 'y': y, 'h': h, 'w': w}
-        create_square_outline(x, y, h, w, color)
+    if section.startswith('team') or section.startswith('enemy'):
+        if 'coords' in config[section]:
+            coords = config[section]['coords']
+            color = 'red' if section.startswith('team') else 'blue'  # Выбор цвета в зависимости от имени секции
+            x, y, h, w = map(int, coords.split(","))
+            squares[section] = {'x': x, 'y': y, 'h': h, 'w': w}
+            create_square_outline(x, y, h, w, color)
 
 # Функция для перемещения квадрата по стрелкам на клавиатуре
 def move_square(key):
