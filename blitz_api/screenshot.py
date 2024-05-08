@@ -2,10 +2,13 @@ import asyncio
 import pyautogui
 import pytesseract
 from PIL import Image
+from configparser import ConfigParser
 
 class Screenshot:
     def __init__(self):
-        pytesseract.pytesseract.tesseract_cmd = r'C:/Users/my/Desktop/py/blitz_cheat/blitz_api/Tesseract-OCR/tesseract.exe'
+        config = ConfigParser()
+        config.read('config.ini')
+        pytesseract.pytesseract.tesseract_cmd = config['settings']['tesseract']
 
     async def take_screenshot_and_detect_text(self, region, filename):
         screenshot = await self.async_take_screenshot(region, filename)
