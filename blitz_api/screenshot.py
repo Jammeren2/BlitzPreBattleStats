@@ -3,13 +3,16 @@ import pyautogui
 import pytesseract
 from PIL import Image
 from configparser import ConfigParser
+import os
 
 class Screenshot:
     def __init__(self):
         config = ConfigParser()
         config.read('config.ini')
-        pytesseract.pytesseract.tesseract_cmd = config['settings']['tesseract']
-
+        # pytesseract.pytesseract.tesseract_cmd = config['settings']['tesseract']
+        current_dir = os.path.dirname(os.path.abspath(__file__))
+        tesseract_path = os.path.join(current_dir, 'Tesseract-OCR', 'tesseract.exe')
+        pytesseract.pytesseract.tesseract_cmd = tesseract_path
     async def take_screenshot_and_detect_text(self, region, filename):
         screenshot = await self.async_take_screenshot(region, filename)
         screenshot_path = filename
