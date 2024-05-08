@@ -24,7 +24,7 @@ https://youtu.be/h1nUQOxF0Nw
 
 2. В файле config.ini найдите следующую строку и замените ее на свой путь к файлу data.wotreplay (In the blitz_cheat_v0.4-test.py file, find the following line and replace it with your path to the data.wotreplay file):
 ```python
-data_file_path = 'C:\\Users\\my\\Documents\\TanksBlitz\\replays\\recording_Nick_Name.wotbreplay\\data.wotreplay'
+data_file_path = C:\\Users\\my\\Documents\\TanksBlitz\\replays\\recording_BuKa_B_Cyxux_TpycuKax.wotbreplay\\data.wotreplay
 ```
 #### Обратите внимание, что папка recording_Nick_Name.wotbreplay появляется только во время боя (Note that the recording_Nick_Name.wotbreplay folder appears only during battle).
 
