@@ -11,7 +11,8 @@
 This Python application is designed to display player statistics in the game "Tanks Blitz" before the start of the battle. The program analyzes data from game replay files and displays player statistics, such as their nicknames and number of victories. To run the program, you need to specify the path to the folder with replay files and the path to the folder with Tesseract-OCR.
 
 #### Test:
-https://youtu.be/h1nUQOxF0Nw
+https://youtu.be/tFm4UldUXB8 
+https://youtu.be/h1nUQOxF0Nw - старое
 
 #### НАСТРОЙКА:
 

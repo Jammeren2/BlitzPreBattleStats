@@ -57,32 +57,30 @@ for section in config.sections():
             squares[section] = {'x': x, 'y': y, 'h': h, 'w': w}
             create_square_outline(x, y, h, w, color)
 
+
 # Функция для перемещения квадрата по стрелкам на клавиатуре
 def move_square(key):
     global selected
     key = key.char
     print(key)
-    if key in ['w', 's', 'a', 'd', 'z', 'x', 'c', 'v']:
+    if key in ['w', 'ц', 's', 'ы', 'a', 'ф', 'd', 'в', 'z', 'я', 'x', 'ч', 'c', 'с', 'v', 'м', 'q', 'й']:
         for section, square in squares.items():
             if section == selected:
-                if key == 'w':
+                if key == 'w' or key == 'ц':
                     square['y'] -= 10
-                elif key == 's':
+                elif key == 's' or key == 'ы':
                     square['y'] += 10
-
-                elif key == 'a':
+                elif key == 'a' or key == 'ф':
                     square['x'] -= 10
-                elif key == 'd':
+                elif key == 'd' or key == 'в':
                     square['x'] += 10
-
-                elif key == 'z':
+                elif key == 'z' or key == 'я':
                     square['h'] -= 10
-                elif key == 'x':
+                elif key == 'x' or key == 'ч':
                     square['h'] += 10
-
-                elif key == 'c':
+                elif key == 'c' or key == 'с':
                     square['w'] -= 10
-                elif key == 'v':
+                elif key == 'v' or key == 'м':
                     square['w'] += 10
 
                 config[section]['coords'] = f"{square['x']},{square['y']},{square['h']},{square['w']}"
@@ -90,7 +88,7 @@ def move_square(key):
                     config.write(configfile)
                 break  # Прерываем цикл после обновления координат выбранного квадрата
         redraw_squares()  # Перерисовываем квадраты после изменения координат
-    if key == 'q':
+    if key == 'q' or key == 'й':
         if selected == 'team':
             selected = 'enemy'
         else:
