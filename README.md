@@ -15,7 +15,7 @@ https://youtu.be/tFm4UldUXB8
 https://youtu.be/h1nUQOxF0Nw - старое
 
 #### НАСТРОЙКА:
-
+https://youtu.be/nwmyTckx62o - гайд
 
 ## Установка (Installation)
 Для установки необходимо выполнить следующие шаги:
