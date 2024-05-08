@@ -13,13 +13,16 @@ This Python application is designed to display player statistics in the game "Ta
 #### Test:
 https://youtu.be/h1nUQOxF0Nw
 
+#### НАСТРОЙКА:
+
+
 ## Установка (Installation)
 Для установки необходимо выполнить следующие шаги:
 
 
 1. Распакуйте архив Tesseract-OCR (Unpack the Tesseract-OCR archive):
 
-2. В файле blitz_cheat_v0.4-test.py найдите следующую строку и замените ее на свой путь к файлу data.wotreplay (In the blitz_cheat_v0.4-test.py file, find the following line and replace it with your path to the data.wotreplay file):
+2. В файле config.ini найдите следующую строку и замените ее на свой путь к файлу data.wotreplay (In the blitz_cheat_v0.4-test.py file, find the following line and replace it with your path to the data.wotreplay file):
 ```python
 data_file_path = 'C:\\Users\\my\\Documents\\TanksBlitz\\replays\\recording_Nick_Name.wotbreplay\\data.wotreplay'
 ```
