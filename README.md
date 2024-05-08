@@ -12,6 +12,7 @@ This Python application is designed to display player statistics in the game "Ta
 
 #### Test:
 https://youtu.be/tFm4UldUXB8 
+
 https://youtu.be/h1nUQOxF0Nw - старое
 
 #### НАСТРОЙКА:
