@@ -1,5 +1,4 @@
 # BlitzPreBattleStats
-# Телеграм автора @vika288475
 ## Описание (Description)
 
 ### Русский:
